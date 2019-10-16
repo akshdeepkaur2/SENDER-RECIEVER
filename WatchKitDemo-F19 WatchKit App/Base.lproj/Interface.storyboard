@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitDemo_F19_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="This is the watch" id="oAU-As-seK"/>
+                        <button width="1" alignment="left" title="Watch Button" id="g8M-9k-1IV">
+                            <color key="backgroundColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="watchButtonPressed" destination="AgC-eL-Hgc" id="WDX-1e-WU8"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Output goes here" id="jdw-NX-QHL">
+                            <color key="textColor" red="0.26861357689999998" green="1" blue="0.064526446160000001" alpha="1" colorSpace="deviceRGB"/>
+                        </label>
+                        <button width="1" alignment="left" title="Go to Page 2" id="ZLy-A0-89u">
+                            <color key="backgroundColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <segue destination="ZNE-M9-EU2" kind="push" id="6ih-Vm-bbk"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="MSG FROM PHONE" id="X97-if-Uu2"/>
+                    </items>
+                    <connections>
+                        <outlet property="msgFromPhoneLabel" destination="X97-if-Uu2" id="Jgk-D1-deV"/>
+                        <outlet property="outputLabel" destination="jdw-NX-QHL" id="pUW-Pl-ZIn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-24" y="194"/>
+        </scene>
+        <!--Page2 Interface Controller-->
+        <scene sceneID="30I-aW-Kaf">
+            <objects>
+                <controller id="ZNE-M9-EU2" customClass="Page2InterfaceController" customModule="WatchKitDemo_F19_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="This is page 2" id="8DS-li-xhH"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="231" y="194"/>
+        </scene>
+    </scenes>
+</document>
